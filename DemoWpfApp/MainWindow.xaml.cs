@@ -1,13 +1,6 @@
 ﻿/**
  * Author: Denis Veil
- * 
- * NuGet-Packages:
- * Fody-Weavers PropertyChanged
- * 
- * Modules:
- * 
  */
-
 
 using System.Windows;
 

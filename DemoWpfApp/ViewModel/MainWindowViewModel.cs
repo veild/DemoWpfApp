@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoWpfApp.Modules;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -45,7 +46,8 @@ namespace DemoWpfApp
         /// </summary>
         private void Collapsing()
         {
-            Console.WriteLine("Todo.");
+            Collapsing collapsing = new Collapsing();
+            collapsing.ShowDialog();
         }
 
         /// <summary>
