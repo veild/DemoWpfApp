@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Name="DemoApp"
+        Title="{Binding MainWindowTitle}"
+        Height="800" Width="1000"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        FontSize="{Binding MainWindowFontSize, FallbackValue=30}"
+        Background="{Binding MainWindowBackground, FallbackValue=#FF1D1075}">
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10">
+            <Button
+                Command="{Binding Cmd_Collapsing}"
+                Content="Collapsing" 
+                Margin="5" />
+
+        </StackPanel>
+
+        <Button
+            Command="{Binding Cmd_Close, Mode=OneWay}"
+            CommandParameter="{Binding ElementName=DemoApp}"
+            Content="Close" 
+            Margin="10"
+            VerticalAlignment="Bottom" />
     </Grid>
 </Window>
